@@ -1,0 +1,75 @@
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background: #111827;
+  color: #ffffff;
+}
+
+a {
+  color: #38bdf8;
+  text-decoration: none;
+}
+
+.container {
+  max-width: 960px;
+  margin: auto;
+  padding: 2rem;
+}
+
+.header {
+  background: #1f2937;
+  padding: 1rem 0;
+}
+
+.header nav a {
+  margin: 0 1rem;
+  font-weight: 600;
+}
+
+.hero {
+  text-align: center;
+  padding: 4rem 2rem;
+  background: linear-gradient(to bottom, #111827, #1f2937);
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 1rem;
+  background: #0ea5e9;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 6px;
+}
+
+.projects,
+.skills,
+.contact {
+  padding: 4rem 2rem;
+}
+
+.project-list {
+  display: grid;
+  gap: 2rem;
+}
+
+.project {
+  background: #1e293b;
+  padding: 1rem;
+  border-radius: 10px;
+}
+
+.skills ul {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.footer {
+  background: #0f172a;
+  text-align: center;
+  padding: 2rem 1rem;
+  font-size: 0.9rem;
+  color: #94a3b8;
+}

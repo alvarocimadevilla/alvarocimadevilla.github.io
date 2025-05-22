@@ -2,18 +2,76 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Portafolio - Tu Nombre</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Álvaro Cimadevilla | Portafolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>Hola, soy [a]</h1>
-  <p>Desarrollador Web Full Stack Junior con experiencia en Angular, Spring Boot, Java y JavaScript.</p>
-  <p><a href="cv.pdf" target="_blank">Descargar CV</a></p>
+  <header class="header">
+    <div class="container">
+      <h1>Álvaro Cimadevilla</h1>
+      <nav>
+        <a href="#projects">Proyectos</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contacto</a>
+      </nav>
+    </div>
+  </header>
 
-  <h2>Proyectos</h2>
-  <ul>
-    <li><a href="https://github.com/tuusuario/nombre-del-proyecto">Proyecto 1</a></li>
-    <li><a href="https://github.com/tuusuario/nombre-del-proyecto2">Proyecto 2</a></li>
-  </ul>
+  <section class="hero">
+    <div class="container">
+      <h2>Desarrollador Web Full Stack</h2>
+      <p>Apasionado por crear soluciones eficientes, trabajar en equipo y mantenerme al día con las últimas tecnologías.</p>
+      <a href="CV_Álvaro.Cimadevilla.pdf" class="btn">Descargar CV</a>
+    </div>
+  </section>
+
+  <section id="projects" class="projects">
+    <div class="container">
+      <h3>Proyectos Destacados</h3>
+      <div class="project-list">
+        <div class="project">
+          <h4>App Full Stack</h4>
+          <p>Desarrollada con Angular, Spring Boot y SQL Server. Documentación técnica y gestión ágil con Taiga.</p>
+          <a href="https://github.com/alvarocimadevilla" target="_blank">Ver en GitHub</a>
+        </div>
+        <div class="project">
+          <h4>Infraestructura IT</h4>
+          <p>Configuración de servidores Windows, Active Directory, DNS y DHCP. Soporte técnico en entorno corporativo.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills" class="skills">
+    <div class="container">
+      <h3>Habilidades</h3>
+      <ul>
+        <li>Java, Spring Boot, Jakarta EE</li>
+        <li>JavaScript, React, Angular</li>
+        <li>HTML5, CSS3, Tailwind</li>
+        <li>SQL, NoSQL</li>
+        <li>Git, Docker</li>
+        <li>DNS, DHCP, SSH</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <div class="container">
+      <h3>Contacto</h3>
+      <p>Email: <a href="mailto:alvarocimadevilla04@gmail.com">alvarocimadevilla04@gmail.com</a></p>
+      <p>Teléfono: <a href="tel:601420663">601 420 663</a></p>
+      <p>GitHub: <a href="https://github.com/alvarocimadevilla" target="_blank">@alvarocimadevilla</a></p>
+      <p>LinkedIn: <a href="https://linkedin.com/in/%C3%A1lvaro-cimadevilla-liebana-962b6a233" target="_blank">Perfil</a></p>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      &copy; 2025 Álvaro Cimadevilla
+    </div>
+  </footer>
 </body>
 </html>
