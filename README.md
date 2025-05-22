@@ -22,7 +22,7 @@ Una aplicación completa para la gestión de citas médicas, diseñada para paci
 En desarollo
 
 ## Cómo navegar por el portafolio
-1. Abre el archivo https://alvarocimadevilla.github.io/ en tu navegador para acceder a la página principal del portafolio.
+1. Abre la web https://alvarocimadevilla.github.io/ en tu navegador para acceder a la página principal del portafolio.
 2. Desde la página principal, puedes explorar los proyectos destacados haciendo clic en los enlaces correspondientes.
 3. Cada proyecto tiene su propia página con detalles, capturas de pantalla y explicaciones de las funcionalidades.
 
