@@ -1,50 +1,41 @@
 body {
   margin: 0;
   font-family: 'Inter', sans-serif;
-  background: #111827;
-  color: #ffffff;
+  background: #f4f4f9;
+  color: #333;
+  line-height: 1.6;
 }
 
 a {
-  color: #38bdf8;
+  color: #0078d7;
   text-decoration: none;
 }
 
 .container {
-  max-width: 960px;
+  max-width: 1100px;
   margin: auto;
   padding: 2rem;
 }
 
 .header {
-  background: #1f2937;
+  background: #0078d7;
+  color: white;
   padding: 1rem 0;
+  text-align: center;
 }
 
 .header nav a {
   margin: 0 1rem;
   font-weight: 600;
-}
-
-.hero {
-  text-align: center;
-  padding: 4rem 2rem;
-  background: linear-gradient(to bottom, #111827, #1f2937);
-}
-
-.btn {
-  display: inline-block;
-  margin-top: 1rem;
-  background: #0ea5e9;
   color: white;
-  padding: 0.75rem 1.5rem;
-  border-radius: 6px;
 }
 
-.projects,
-.skills,
-.contact {
+.about, .projects, .skills, .contact {
   padding: 4rem 2rem;
+  background: white;
+  margin: 2rem 0;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .project-list {
@@ -53,23 +44,15 @@ a {
 }
 
 .project {
-  background: #1e293b;
+  background: #f9f9f9;
   padding: 1rem;
-  border-radius: 10px;
-}
-
-.skills ul {
-  list-style: none;
-  padding: 0;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 1rem;
+  border-radius: 8px;
+  border: 1px solid #ddd;
 }
 
 .footer {
-  background: #0f172a;
+  background: #333;
+  color: white;
   text-align: center;
-  padding: 2rem 1rem;
-  font-size: 0.9rem;
-  color: #94a3b8;
+  padding: 1rem 0;
 }

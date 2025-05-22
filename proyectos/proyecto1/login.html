@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <h1>Login</h1>
+      <p>Acceso al sistema para pacientes y médicos.</p>
+    </div>
+  </header>
+
+  <section class="project-details">
+    <div class="container">
+      <h2>Descripción</h2>
+      <p>El sistema de login permite a los usuarios autenticarse según su rol (paciente o médico). Los pacientes ingresan su DNI y PIN, mientras que los médicos también deben proporcionar un código adicional.</p>
+
+      <h2>Capturas de pantalla</h2>
+      <img src="img/SeleccionarLogin.PNG" alt="Pantalla de selección de login" style="width:100%; margin-bottom: 1rem;">
+      <p>Pantalla inicial donde el usuario selecciona su rol (Paciente o Médico).</p>
+
+      <img src="img/LoginPaciente.PNG" alt="Login de paciente" style="width:100%; margin-bottom: 1rem;">
+      <p>Formulario de login para pacientes.</p>
+
+      <img src="img/LoginMedico.PNG" alt="Login de médico" style="width:100%; margin-bottom: 1rem;">
+      <p>Formulario de login para médicos, con campo adicional para el código de médico.</p>
+
+      <h2>Rutas relacionadas</h2>
+      <ul>
+        <li>Frontend: `/login/:perfil` (Angular Router)</li>
+        <li>Backend: `/api/auth/login` (Spring Boot)</li>
+      </ul>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <a href="index.html">Volver a funcionalidades</a>
+    </div>
+  </footer>
+</body>
+</html>
