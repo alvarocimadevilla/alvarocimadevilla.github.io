@@ -28,6 +28,24 @@
         <li>Frontend: `/gestionar-citas` (Angular Router)</li>
         <li>Backend: `/api/citas` (Spring Boot)</li>
       </ul>
+
+      <h2>Estados y transiciones</h2>
+      <ul>
+        <li>PROGRAMADA → COMPLETADA (tarea programada por fecha pasada)</li>
+        <li>PROGRAMADA → CANCELADA (paciente/médico según política de tiempo)</li>
+      </ul>
+
+      <h2>Acciones</h2>
+      <ul>
+        <li>Filtrar por estado y rango de fechas, reprogramar si el médico lo permite</li>
+        <li>Colores por estado en calendario para claridad visual</li>
+      </ul>
+
+      <h2>API y errores</h2>
+      <ul>
+        <li>GET /api/citas?pacienteId|medicoId&estado&desde&hasta</li>
+        <li>PUT /api/citas/{id}/cancelar → 200 | 409 fuera de plazo | 403 sin permiso</li>
+      </ul>
     </div>
   </section>
 

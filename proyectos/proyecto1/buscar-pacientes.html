@@ -23,6 +23,24 @@
       <img src="img/BuscarPacientes.PNG" alt="Buscar pacientes" style="width:100%; margin-bottom: 1rem;">
       <p>Vista del buscador de pacientes.</p>
 
+      <h2>Criterios y ranking</h2>
+      <ul>
+        <li>Búsqueda por DNI exacto o nombre/apellidos con coincidencia parcial</li>
+        <li>Orden: coincidencia exacta → comienzos → similares</li>
+      </ul>
+
+      <h2>Validaciones</h2>
+      <ul>
+        <li>DNI con formato válido; nombre 2–60 caracteres</li>
+        <li>Acceso restringido a pacientes asignados al médico</li>
+      </ul>
+
+      <h2>API y errores</h2>
+      <ul>
+        <li>GET /api/pacientes?dni|nombre → 200 lista | 404 vacío</li>
+        <li>GET /api/pacientes/{id} → 200 detalle | 403 si no está asignado</li>
+      </ul>
+
       <h2>Rutas relacionadas</h2>
       <ul>
         <li>Frontend: `/buscar-pacientes` (Angular Router)</li>

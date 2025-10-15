@@ -28,6 +28,34 @@
         <li>Frontend: `/pedir-cita` (Angular Router)</li>
         <li>Backend: `/api/citas` (Spring Boot)</li>
       </ul>
+
+      <h2>Flujo</h2>
+      <ul>
+        <li>Seleccionar médico → consultar disponibilidad → elegir fecha/hora → confirmar</li>
+        <li>Se crea la cita PROGRAMADA y se notifica por email</li>
+      </ul>
+
+      <h2>Validaciones</h2>
+      <ul>
+        <li>Fecha futura, hueco libre, motivo con 5–280 caracteres</li>
+        <li>Sin solapes con otras citas del paciente</li>
+      </ul>
+
+      <h2>API y errores</h2>
+      <ul>
+        <li>GET /api/citas/disponibilidad?medicoId&fecha</li>
+        <li>POST /api/citas → 201 cita | 409 solape | 422 datos inválidos</li>
+      </ul>
+
+      <h2>Ejemplo JSON</h2>
+      <pre>{
+  "pacienteId": "p1",
+  "medicoId": "m1",
+  "fecha": "2025-05-20",
+  "hora": "10:30",
+  "tipoCita": "PRESENCIAL",
+  "motivo": "Dolor de cabeza"
+}</pre>
     </div>
   </section>
 

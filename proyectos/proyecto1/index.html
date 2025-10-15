@@ -27,6 +27,39 @@
         <li>Control de versiones: GitHub</li>
       </ul>
 
+      <h2>Arquitectura</h2>
+      <ul>
+        <li>SPA Angular (Router + Guards) → API REST Spring Boot (MVC) → MongoDB (colecciones y GridFS)</li>
+        <li>Autenticación con JWT en Authorization: Bearer ...; CORS habilitado por dominio</li>
+        <li>Auditoría: derivaciones, descargas de documentos y cambios de estado de citas</li>
+      </ul>
+
+      <h2>API principal</h2>
+      <ul>
+        <li>Auth: POST /api/auth/login, GET /api/auth/me</li>
+        <li>Citas: GET/POST/PUT/DELETE /api/citas, GET /api/citas?medicoId|pacienteId&fecha</li>
+        <li>Derivaciones: POST /api/derivaciones</li>
+        <li>Especialistas: GET /api/especialistas, GET /api/especialistas/{id}/disponibilidad</li>
+        <li>Documentos: POST/GET /api/documentos, GET /api/documentos/{id}/descargar</li>
+        <li>Pacientes: GET /api/pacientes?dni|nombre</li>
+      </ul>
+
+      <h2>Modelo de datos (resumen)</h2>
+      <ul>
+        <li>pacientes: { id, dni, nombre, medicosAsignados[], informacionMedica{}, medicación[], documentos[] }</li>
+        <li>medicos: { id, dni, especialidad, horario, notificaciones[] }</li>
+        <li>citas: { id, pacienteId, medicoId, fechaHora, estado, tipoCita }</li>
+        <li>documentos (GridFS): metadatos { pacienteId, medicoId, tipo, titulo, version }</li>
+        <li>secretarias, citasInvitado</li>
+      </ul>
+
+      <h2>Estados y reglas clave</h2>
+      <ul>
+        <li>Cita: PROGRAMADA → COMPLETADA | CANCELADA (por rol y por tiempo)</li>
+        <li>Solapes: no se permiten citas/derivaciones si hay conflicto horario (409)</li>
+        <li>Archivos: PDF hasta 10 MB, validación MIME y nombre</li>
+      </ul>
+
       <h2>Explorar funcionalidades</h2>
       <ul>
         <li><a href="login.html">Login</a></li>
@@ -44,7 +77,7 @@
 
   <footer class="footer">
     <div class="container">
-      <a href="../../index.html">Volver al portafolio</a>
+      <a href="../../index.html">Volver al porfolio</a>
     </div>
   </footer>
 </body>

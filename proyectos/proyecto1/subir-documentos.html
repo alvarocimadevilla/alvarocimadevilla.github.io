@@ -28,6 +28,30 @@
         <li>Frontend: `/subir-documentos` (Angular Router)</li>
         <li>Backend: `/api/documentos` (Spring Boot)</li>
       </ul>
+
+      <h2>Validaciones</h2>
+      <ul>
+        <li>Archivo PDF, tamaño ≤ 10 MB, nombre sin caracteres peligrosos</li>
+        <li>Título 3–120 caracteres; descripción 0–500</li>
+      </ul>
+
+      <h2>Metadatos</h2>
+      <ul>
+        <li>GridFS metadata: pacienteId, medicoId, titulo, tipo, version, hash</li>
+      </ul>
+
+      <h2>API y errores</h2>
+      <ul>
+        <li>POST /api/documentos (multipart form-data: file, pacienteId, titulo, descripcion, tipo)</li>
+        <li>Respuestas: 201 creado | 415 tipo no permitido | 413 demasiado grande | 422 inválido</li>
+      </ul>
+
+      <h2>Ejemplo multipart</h2>
+      <pre>file: informe.pdf
+pacienteId: p1
+titulo: Informe radiología
+descripcion: Control trimestral
+tipo: INFORME</pre>
     </div>
   </section>
 

@@ -29,11 +29,32 @@
       <img src="img/LoginMedico.PNG" alt="Login de médico" style="width:100%; margin-bottom: 1rem;">
       <p>Formulario de login para médicos, con campo adicional para el código de médico.</p>
 
-      <h2>Rutas relacionadas</h2>
+      <h2>Flujo</h2>
       <ul>
-        <li>Frontend: `/login/:perfil` (Angular Router)</li>
-        <li>Backend: `/api/auth/login` (Spring Boot)</li>
+        <li>Usuario elige rol → envía credenciales → backend valida → emite JWT con rol y exp</li>
+        <li>El frontend guarda el token en memoria y navega al dashboard según rol</li>
       </ul>
+
+      <h2>Validaciones y seguridad</h2>
+      <ul>
+        <li>DNI válido (formato nacional), PIN con hash bcrypt en servidor</li>
+        <li>Médico: requiere codigoMedico adicional</li>
+        <li>Bloqueo tras N intentos fallidos y registro de IP/fecha</li>
+        <li>JWT con expiración corta; refresh mediante nuevo login</li>
+      </ul>
+
+      <h2>API y errores</h2>
+      <ul>
+        <li>POST /api/auth/login → 200 { token, rol } | 401 credenciales inválidas</li>
+        <li>GET /api/auth/me (auth) → 200 perfil | 401/403 sin token/rol</li>
+      </ul>
+
+      <h2>Ejemplo JSON</h2>
+      <pre>{
+  "dni": "12345678X",
+  "pin": "1234",
+  "codigoMedico": "MED-001"
+}</pre>
     </div>
   </section>
 

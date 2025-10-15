@@ -19,6 +19,51 @@
       <h2>Descripción</h2>
       <p>Los médicos pueden seleccionar una especialidad, un especialista, una fecha y hora, y agregar un motivo para derivar al paciente.</p>
 
+      <h2>Flujo de derivación</h2>
+      <ul>
+        <li>Buscar paciente y especialidad → validar permisos del médico.</li>
+        <li>Comprobar disponibilidad del especialista y solapamientos.</li>
+        <li>Crear derivación y (opcional) generar nueva cita con el especialista.</li>
+        <li>Notificar a paciente y especialista por email.</li>
+        <li>Auditar la acción (quién deriva, a quién y cuándo).</li>
+      </ul>
+
+      <h2>API principal</h2>
+      <ul>
+        <li>POST /api/derivaciones: crea la derivación (pacienteId, especialistaId, fecha, motivo).</li>
+        <li>GET /api/especialistas?especialidad=...: lista especialistas disponibles.</li>
+        <li>GET /api/especialistas/{id}/disponibilidad?fecha=...: huecos libres.</li>
+      </ul>
+
+      <h2>Validaciones y reglas</h2>
+      <ul>
+        <li>Permisos: el médico debe estar asignado al paciente</li>
+        <li>Fecha futura y sin solapes con el especialista</li>
+        <li>Motivo 5–280 caracteres</li>
+        <li>Opcional: crear cita con el especialista y notificar por email</li>
+      </ul>
+
+      <h2>Estados y notificaciones</h2>
+      <ul>
+        <li>Derivación: CREADA → (OPCIONAL) CITA PROGRAMADA con especialista</li>
+        <li>Emails: paciente y especialista reciben confirmación y detalles</li>
+      </ul>
+
+      <h2>Errores comunes</h2>
+      <ul>
+        <li>403 sin permiso | 404 especialista/paciente no existe | 409 solape</li>
+      </ul>
+
+      <h2>Ejemplo JSON</h2>
+      <pre>{
+  "pacienteId": "p1",
+  "especialistaId": "m2",
+  "fecha": "2025-05-22",
+  "hora": "11:00",
+  "motivo": "Valoración de traumatología",
+  "crearCita": true
+}</pre>
+
       <h2>Capturas de pantalla</h2>
       <img src="img/DerivacionEspecialista.PNG" alt="Asignar especialista" style="width:100%; margin-bottom: 1rem;">
       <p>Formulario para asignar un paciente a un especialista.</p>

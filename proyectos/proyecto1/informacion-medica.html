@@ -28,6 +28,22 @@
         <li>Frontend: `/informacion-medica` (Angular Router)</li>
         <li>Backend: `/api/informacion-medica` (Spring Boot)</li>
       </ul>
+
+      <h2>Campos</h2>
+      <ul>
+        <li>grupoSanguineo, altura, peso, imc (calculado), alergias[], vacunas[]</li>
+      </ul>
+
+      <h2>Validaciones</h2>
+      <ul>
+        <li>Rangos razonables (ej. altura 50–250 cm, peso 2–400 kg)</li>
+        <li>IMC: $\\text{IMC}=\\frac{\\text{peso}}{(\\text{altura}/100)^2}$</li>
+      </ul>
+
+      <h2>API</h2>
+      <ul>
+        <li>GET /api/informacion-medica?pacienteId</li>
+      </ul>
     </div>
   </section>
 

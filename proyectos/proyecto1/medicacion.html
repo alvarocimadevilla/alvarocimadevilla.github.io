@@ -23,6 +23,22 @@
       <img src="img/Medicacion.PNG" alt="Medicación actual" style="width:100%; margin-bottom: 1rem;">
       <p>Vista de la medicación recetada al paciente.</p>
 
+      <h2>Estructura de datos</h2>
+      <ul>
+        <li>medicacion: [{ nombre, dosis, frecuencia, inicio, fin, prescriptorId }]</li>
+      </ul>
+
+      <h2>Validaciones</h2>
+      <ul>
+        <li>Fechas coherentes (inicio ≤ fin), unidades y frecuencias válidas</li>
+        <li>Solo visible para el paciente y sus médicos asignados</li>
+      </ul>
+
+      <h2>API</h2>
+      <ul>
+        <li>GET /api/medicacion?pacienteId</li>
+      </ul>
+
       <h2>Rutas relacionadas</h2>
       <ul>
         <li>Frontend: `/medicacion` (Angular Router)</li>
